@@ -12,6 +12,10 @@ import {
   FaLinux,
   FaFigma,
   FaAws,
+  FaAngular,
+  FaPhp,
+  FaJava,
+  FaShopify,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -26,6 +30,11 @@ import {
   SiFirebase,
   SiVercel,
   SiVite,
+  SiBootstrap,
+  SiSpringboot,
+  SiDotnet,
+  SiJavascript,
+  SiShopify,
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
@@ -68,149 +77,81 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       icon: Code2,
-      title: "Frontend Development",
+      title: "Programming Languages",
       color: "text-blue-400",
       skills: [
-        { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
-        {
-          name: "Next.js",
-          icon: <SiNextdotjs className="w-4 h-4 text-white" />,
-        },
-        {
-          name: "TypeScript",
-          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-        },
-        {
-          name: "HTML5",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#E34F26]" />,
-        },
-        {
-          name: "CSS3",
-          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#1572B6]" />,
-        },
-      ],
-    },
-    {
-      icon: Database,
-      title: "Backend Development",
-      color: "text-green-400",
-      skills: [
-        {
-          name: "Node.js",
-          icon: <FaNodeJs className="w-4 h-4 text-[#339933]" />,
-        },
-        {
-          name: "Python",
-          icon: <FaPython className="w-4 h-4 text-[#3776AB]" />,
-        },
-        {
-          name: "PostgreSQL",
-          icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
-        },
-        {
-          name: "MongoDB",
-          icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
-        },
-        {
-          name: "REST APIs",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
-        },
-        {
-          name: "GraphQL",
-          icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
-        },
+        { name: "C", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "Java", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "Python", icon: <FaPython className="w-4 h-4 text-[#3776AB]" /> },
+        { name: "Dart", icon: <SiVite className="w-4 h-4" /> },
+        { name: "PHP", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "JavaScript", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#F7DF1E]" /> },
       ],
     },
     {
       icon: Layout,
-      title: "UI/UX Design",
+      title: "Frontend & Mobile",
       color: "text-purple-400",
       skills: [
-        { name: "Figma", icon: <FaFigma className="w-4 h-4 text-[#F24E1E]" /> },
-        {
-          name: "Responsive Design",
-          icon: <Layout className="w-4 h-4 text-[#38B2AC]" />,
-        },
-        {
-          name: "Wireframing",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#9CA3AF]" />,
-        },
-        {
-          name: "Prototyping",
-          icon: <MdAnimation className="w-4 h-4 text-[#F59E0B]" />,
-        },
+        { name: "HTML5", icon: <BsFileEarmarkCode className="w-4 h-4 text-[#E34F26]" /> },
+        { name: "SCSS", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "Bootstrap", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
+        { name: "Angular", icon: <SiNextdotjs className="w-4 h-4" /> },
+        { name: "Flutter (Web)", icon: <SiVite className="w-4 h-4" /> },
+        { name: "Flutter (Mobile)", icon: <SiVite className="w-4 h-4" /> },
+        { name: "Android Studio", icon: <TbBrandVscode className="w-4 h-4" /> },
+      ],
+    },
+    {
+      icon: Database,
+      title: "Backend & Frameworks",
+      color: "text-green-400",
+      skills: [
+        { name: "Node.js", icon: <FaNodeJs className="w-4 h-4 text-[#339933]" /> },
+        { name: "Spring Boot", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "Spring Data", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: ".NET", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "Symfony", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "Laravel", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "JEE", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "XML", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
       ],
     },
     {
       icon: Cloud,
-      title: "Cloud & DevOps",
+      title: "Databases & DevOps",
       color: "text-orange-400",
       skills: [
+        { name: "Oracle", icon: <SiPostgresql className="w-4 h-4 text-[#F80000]" /> },
+        { name: "SQL Server", icon: <SiMongodb className="w-4 h-4 text-[#CC2927]" /> },
+        { name: "MySQL", icon: <SiMongodb className="w-4 h-4 text-[#4479A1]" /> },
+        { name: "PL/SQL", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "Firebase", icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" /> },
         { name: "AWS", icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> },
-        {
-          name: "Docker",
-          icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,
-        },
+        { name: "Docker", icon: <FaDocker className="w-4 h-4 text-[#2496ED]" /> },
         { name: "CI/CD", icon: <FcWorkflow className="w-4 h-4" /> },
-        {
-          name: "Kubernetes",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#326CE5]" />,
-        },
-        { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
-        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
       ],
     },
     {
       icon: Cpu,
-      title: "Tools & Technologies",
+      title: "ERP, CRM & Tools",
       color: "text-pink-400",
       skills: [
-        {
-          name: "VS Code",
-          icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />,
-        },
-        { name: "Jest", icon: <SiJest className="w-4 h-4 text-[#C21325]" /> },
-        {
-          name: "Webpack",
-          icon: <SiWebpack className="w-4 h-4 text-[#8DD6F9]" />,
-        },
-        { name: "Redux", icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> },
-        {
-          name: "Firebase",
-          icon: <SiFirebase className="w-4 h-4 text-[#FFCA28]" />,
-        },
-        { name: "Vercel", icon: <SiVercel className="w-4 h-4 text-white" /> },
-        { name: "Vite", icon: <SiVite className="w-4 h-4 text-[#646CFF]" /> },
-      ],
-    },
-    {
-      icon: Paintbrush,
-      title: "Creative Skills",
-      color: "text-yellow-400",
-      skills: [
-        {
-          name: "UI Animation",
-          icon: <MdAnimation className="w-4 h-4 text-[#FF4081]" />,
-        },
-        {
-          name: "SVG Animation",
-          icon: <MdAnimation className="w-4 h-4 text-[#00C853]" />,
-        },
-        {
-          name: "3D Modeling",
-          icon: <Cpu className="w-4 h-4 text-[#7C4DFF]" />,
-        },
-        {
-          name: "Motion Graphics",
-          icon: <MdAnimation className="w-4 h-4 text-[#FF6D00]" />,
-        },
+        { name: "Dolibarr", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
+        { name: "Shopify integration", icon: <SiShopify className="w-4 h-4" /> },
+        { name: "Shopify", icon: <FaShopify className="w-4 h-4" /> },
+        { name: "Merise", icon: <BsGrid1X2 className="w-4 h-4" /> },
+        { name: "UML", icon: <BsGrid1X2 className="w-4 h-4" /> },
+        { name: "SCRUM", icon: <FcWorkflow className="w-4 h-4" /> },
+        { name: "Jira", icon: <BsGrid1X2 className="w-4 h-4" /> },
+        { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
+        { name: "Windows", icon: <BsFileEarmarkCode className="w-4 h-4" /> },
       ],
     },
   ];
+  
+  
 
   return (
     <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">

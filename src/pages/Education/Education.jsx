@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import EducationLoader from "@/components/ui/EducationLoader";
 import {
-  Star,
   Award,
   Calendar,
   BookOpen,
-  GraduationCap,
   Trophy,
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -15,35 +12,43 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      degree:
+        "Engineering degree in Web Engineering and Mobile Computing (IWIM)",
+      school: "ENSIAS, Rabat, Morocco",
+      mascot: "🎓",
+      year: "2020 – 2023",
+      achievements: ["Engineering diploma awarded"],
+      skills: ["Web Engineering", "Mobile Computing"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+        "Completed a 3-year engineering program focusing on full-stack web and mobile application development.",
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      degree:
+        "Preparatory Classes for Engineering Schools (Mathematics-Physics, MP)",
+      school: "Ibn Tahir High School, Errachidia, Morocco",
+      mascot: "📐",
+      year: "2018 – 2020",
+      achievements: ["Preparatory cycle completed"],
+      skills: ["Mathematics", "Physics"],
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Two-year preparatory cycle emphasizing advanced mathematics and physics fundamentals for engineering entrance exams.",
+    },
+    {
+      degree:
+        "Baccalaureate in Mathematical Sciences A (French Option)",
+      school: "SIJILMASSA High School, Errachidia, Morocco",
+      mascot: "📘",
+      year: "2017 – 2018",
+      achievements: ["Baccalaureate diploma obtained"],
+      skills: ["Mathematical Sciences"],
+      description:
+        "Secondary education diploma with specialization in mathematical sciences, French option.",
     },
   ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
   const cardVariants = {
@@ -51,10 +56,7 @@ const EducationSection = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-      },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
