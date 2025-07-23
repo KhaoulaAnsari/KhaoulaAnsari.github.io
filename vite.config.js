@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/KhaoulaAnsari.github.io/",
+  base: "/", // <-- Corrigé ici
   plugins: [react()],
   resolve: {
     alias: {
